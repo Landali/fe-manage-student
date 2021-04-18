@@ -35,6 +35,8 @@ class Login extends Component {
         e.preventDefault();
         console.log("username", username)
         console.log("password", password)
+        const origin = window.location.origin
+        window.location.replace(`${origin}/view-student`)
     }
 
     onKeyPress(event) {
@@ -87,18 +89,6 @@ class Login extends Component {
             buttonEnable={username === '' || password === '' ? false : true}
         />
 
-
-        let rememberUserCheck = <div className="custom-control custom-checkbox mb-3">
-            <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customCheck1" />
-            <label
-                className="custom-control-label"
-                htmlFor="customCheck1">Remember password</label>{/*TODO: CHANGE FOR I18N */}
-        </div>
-
-
         return (
 
             <div id="lognContainer">
@@ -115,7 +105,6 @@ class Login extends Component {
 
                                         {usernameInput}
                                         {passwordInput}
-                                        {rememberUserCheck}
                                         {buttonLogin}
 
                                         <hr id="loginhr"></hr>

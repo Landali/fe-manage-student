@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import SignUp from "./containers/signup";
 import Layout from './containers/layout'
+import CreateStudent from './containers/createstudent'
+import ViewStudents from './containers/viewstudent'
 class App extends Component {
   state = {
 
@@ -15,13 +17,13 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-       
-  
         <div className="auth-wrapper">
           <div className="auth-inner">
             <Switch>
               <Route exact path='/' component={Layout} />
               <Route exact path='/sign-up' component={SignUp} />
+              <Route exact path='/create-student' component={CreateStudent} />
+              <Route exact path='/view-student' component={ViewStudents} />
             </Switch>
           </div>
         </div>
