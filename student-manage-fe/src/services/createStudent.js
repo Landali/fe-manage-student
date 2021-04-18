@@ -8,10 +8,8 @@ const createStudent = ({
 }) => axios
     .post(`https://dvtbccva71.execute-api.us-east-1.amazonaws.com/dev/create-student/${firstname}`, {
         cancelToken: source.token,
-        params: {
-            firstname,
-            lastname
-        }
+        firstname,
+        lastname
     }).then((student) => {
         console.debug('Student was created successfully!', student)
         return Promise.resolve(student)
@@ -21,4 +19,4 @@ const createStudent = ({
         return Promise.reject([])
     })
 
-    export default createStudent
+export default createStudent
