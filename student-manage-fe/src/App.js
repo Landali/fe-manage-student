@@ -8,6 +8,7 @@ import SignUp from "./containers/signup";
 import Layout from './containers/layout'
 import CreateStudent from './containers/createstudent'
 import ViewStudents from './containers/viewstudent'
+import ViewDiploma from './containers/studentDiploma'
 class App extends Component {
   state = {
 
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path='/sign-up' component={SignUp} />
               <Route exact path='/create-student' component={CreateStudent} />
               <Route exact path='/view-student' component={ViewStudents} />
+              <Route path='/view-diploma/:id' component={ViewDiploma} />
             </Switch>
           </div>
         </div>
